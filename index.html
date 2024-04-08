@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="https://code.jquery.com/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script type="text/javascript">
+            $( function() {
+            $( "#datepicker" ).datepicker();
+            } );
+            $(document).ready(function() {
+            $("#knop").click(function() {
+            var naam = $("#reden").val();
+            var datum = $("#datepicker").val();
+            window.alert("Mijn favoriete datum is " + datum + " en reden daarvoor is: " + naam);
+            });
+            });
+        </script>
+    </head>
+    <body>
+        <form>
+        Mooiste dag in mijn leven: <input type="text" id="datepicker">
+        <br>
+        <br>
+        Reden: <input type="text" id="reden"><br><br>
+        <input id="knop" name="knop" type="button"
+            value="Klik op deze knop">
+    </body>
+</html>
